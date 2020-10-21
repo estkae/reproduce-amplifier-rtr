@@ -1208,13 +1208,13 @@ $EndComp
 $Comp
 L Analog_Switch:DG308AxY U5
 U 3 1 5E81E2E5
-P 5500 1350
-F 0 "U5" H 5500 950 50  0000 C CNN
-F 1 "ADG442" H 5500 1050 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5500 1250 50  0001 C CNN
-F 3 "http://pdf.datasheetcatalog.com/datasheets/70/494502_DS.pdf" H 5500 1350 50  0001 C CNN
-	3    5500 1350
-	-1   0    0    1   
+P 7550 4950
+F 0 "U5" H 7550 4550 50  0000 C CNN
+F 1 "ADG442" H 7550 4650 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7550 4850 50  0001 C CNN
+F 3 "http://pdf.datasheetcatalog.com/datasheets/70/494502_DS.pdf" H 7550 4950 50  0001 C CNN
+	3    7550 4950
+	1    0    0    1   
 $EndComp
 $Comp
 L power:VCC #PWR038
@@ -1320,12 +1320,12 @@ $EndComp
 $Comp
 L Analog_Switch:DG308AxY U5
 U 1 1 5E63D3A4
-P 7550 4950
-F 0 "U5" H 7750 4400 50  0000 C CNN
-F 1 "ADG442" H 7800 4300 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7550 4850 50  0001 C CNN
-F 3 "http://pdf.datasheetcatalog.com/datasheets/70/494502_DS.pdf" H 7550 4950 50  0001 C CNN
-	1    7550 4950
+P 5500 1350
+F 0 "U5" H 5700 800 50  0000 C CNN
+F 1 "ADG442" H 5750 700 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5500 1250 50  0001 C CNN
+F 3 "http://pdf.datasheetcatalog.com/datasheets/70/494502_DS.pdf" H 5500 1350 50  0001 C CNN
+	1    5500 1350
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1333,7 +1333,7 @@ L Connector:Screw_Terminal_01x02 J6
 U 1 1 5E506BAB
 P 5800 3650
 F 0 "J6" V 5672 3830 50  0000 L CNN
-F 1 "Commands" V 5763 3830 50  0000 L CNN
+F 1 "CMD" V 5763 3830 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 3650 50  0001 C CNN
 F 3 "~" H 5800 3650 50  0001 C CNN
 	1    5800 3650
@@ -2164,7 +2164,6 @@ Wire Wire Line
 Connection ~ 7550 4300
 Wire Wire Line
 	7550 4300 7550 4350
-Connection ~ 7250 4950
 Wire Wire Line
 	5400 4850 6000 4850
 Connection ~ 6000 4850
@@ -2559,7 +2558,6 @@ F 3 "" H 4400 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7850 4950 8450 4950
-Connection ~ 7850 4950
 $Comp
 L Device:C C39
 U 1 1 5FF9DCCA
@@ -2665,4 +2663,6 @@ Wire Wire Line
 	10400 2050 10400 5050
 Wire Wire Line
 	8000 1850 10400 1850
+Connection ~ 7250 4950
+Connection ~ 7850 4950
 $EndSCHEMATC
