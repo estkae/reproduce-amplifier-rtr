@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name smisioto)(type Legacy)(uri /Users/macbook/kicad/lib_w_analog/w_analog.lib)(options "")(descr ""))
+)
