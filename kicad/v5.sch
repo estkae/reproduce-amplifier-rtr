@@ -265,7 +265,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 5050 1850 5050
 Text Notes 7400 7500 0    50   ~ 0
-Reproduce Amplifier for Jupiter 106C (6В24.080 head)
+Reproduce Amplifier for Jupiter MK-106S (6В24.080 head)
 Text Notes 8250 7650 0    50   ~ 0
 20.10.2020
 $Comp
@@ -314,17 +314,6 @@ F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6450 1850 50  0001 C CNN
 F 3 "https://www.analog.com/static/imported-files/data_sheets/ADA4075-2.pdf" H 6450 1850 50  0001 C CNN
 	3    6450 1850
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R12C
-U 1 1 5E537A89
-P 4250 600
-F 0 "R12C" V 4250 350 50  0000 C CNN
-F 1 "51k, 1%" V 4250 650 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 4180 600 50  0001 C CNN
-F 3 "~" H 4250 600 50  0001 C CNN
-	1    4250 600 
-	0    1    1    0   
 $EndComp
 $Comp
 L power:VCC #PWR027
@@ -447,10 +436,10 @@ F 3 "" H 10400 1750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C6C
+L Device:C C6C1
 U 1 1 5E570E57
 P 3700 2800
-F 0 "C6C" V 3650 2550 50  0000 C CNN
+F 0 "C6C1" V 3650 2550 50  0000 C CNN
 F 1 "22n, 1%" V 3650 3050 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 3738 2650 50  0001 C CNN
 F 3 "~" H 3700 2800 50  0001 C CNN
@@ -742,42 +731,6 @@ F 3 "https://www.analog.com/static/imported-files/data_sheets/ADA4075-2.pdf" H 8
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R21
-U 1 1 5E7A04C9
-P 6350 4200
-F 0 "R21" V 6143 4200 50  0000 C CNN
-F 1 "9.92k" V 6250 4200 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 6280 4200 50  0001 C CNN
-F 3 "~" H 6350 4200 50  0001 C CNN
-	1    6350 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C14
-U 1 1 5E7A04CF
-P 6350 4450
-F 0 "C14" V 6400 4350 50  0000 C CNN
-F 1 "160n" V 6400 4650 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6388 4300 50  0001 C CNN
-F 3 "~" H 6350 4450 50  0001 C CNN
-	1    6350 4450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6200 4200 6200 4350
-Wire Wire Line
-	6500 4450 6500 4350
-Wire Wire Line
-	6000 4350 6200 4350
-Connection ~ 6200 4350
-Wire Wire Line
-	6200 4350 6200 4450
-Wire Wire Line
-	6500 4350 6750 4350
-Connection ~ 6500 4350
-Wire Wire Line
-	6500 4350 6500 4200
-$Comp
 L power:VCC #PWR041
 U 1 1 5E7A04DD
 P 8650 4500
@@ -889,25 +842,14 @@ F 3 "" H 8300 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
-U 1 1 5E7A0529
-P 5350 6000
-F 0 "C12" V 5098 6000 50  0000 C CNN
-F 1 "100n" V 5189 6000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 5388 5850 50  0001 C CNN
-F 3 "~" H 5350 6000 50  0001 C CNN
-	1    5350 6000
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R18
 U 1 1 5E7A052F
-P 5500 6250
-F 0 "R18" H 5570 6296 50  0000 L CNN
-F 1 "1.5k" H 5570 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 5430 6250 50  0001 C CNN
-F 3 "~" H 5500 6250 50  0001 C CNN
-	1    5500 6250
+P 5600 6450
+F 0 "R18" H 5670 6496 50  0000 L CNN
+F 1 "1.5k" H 5670 6405 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5530 6450 50  0001 C CNN
+F 3 "~" H 5600 6450 50  0001 C CNN
+	1    5600 6450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -916,8 +858,6 @@ Wire Wire Line
 	5000 6000 5200 6000
 Wire Wire Line
 	5000 4850 5100 4850
-Wire Wire Line
-	5500 6000 5500 6100
 $Comp
 L Amplifier_Operational:NE5532 U7
 U 2 1 5E7A053A
@@ -941,17 +881,16 @@ F 3 "https://www.analog.com/static/imported-files/data_sheets/ADA4075-2.pdf" H 6
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 6000 5850 6000
-Connection ~ 5500 6000
+	5500 6000 5600 6000
 $Comp
 L power:GND #PWR024
 U 1 1 5E7A0548
-P 5500 6400
-F 0 "#PWR024" H 5500 6150 50  0001 C CNN
-F 1 "GND" H 5505 6227 50  0000 C CNN
-F 2 "" H 5500 6400 50  0001 C CNN
-F 3 "" H 5500 6400 50  0001 C CNN
-	1    5500 6400
+P 5600 6600
+F 0 "#PWR024" H 5600 6350 50  0001 C CNN
+F 1 "GND" H 5605 6427 50  0000 C CNN
+F 2 "" H 5600 6600 50  0001 C CNN
+F 3 "" H 5600 6600 50  0001 C CNN
+	1    5600 6600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1045,7 +984,7 @@ L Device:C C11
 U 1 1 5E7A0588
 P 5150 7250
 F 0 "C11" V 4898 7250 50  0000 C CNN
-F 1 "6.2n" V 4989 7250 50  0000 C CNN
+F 1 "6.8n" V 4989 7250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 5188 7100 50  0001 C CNN
 F 3 "~" H 5150 7250 50  0001 C CNN
 	1    5150 7250
@@ -1056,7 +995,7 @@ L Device:C C13
 U 1 1 5E7A058E
 P 5500 7250
 F 0 "C13" V 5248 7250 50  0000 C CNN
-F 1 "6.2n" V 5339 7250 50  0000 C CNN
+F 1 "6.8n" V 5339 7250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 5538 7100 50  0001 C CNN
 F 3 "~" H 5500 7250 50  0001 C CNN
 	1    5500 7250
@@ -1067,7 +1006,7 @@ L Device:R R20
 U 1 1 5E7A0594
 P 5800 7400
 F 0 "R20" H 5870 7446 50  0000 L CNN
-F 1 "1.37k" H 5870 7355 50  0000 L CNN
+F 1 "1.25k" H 5870 7355 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5730 7400 50  0001 C CNN
 F 3 "~" H 5800 7400 50  0001 C CNN
 	1    5800 7400
@@ -1077,8 +1016,8 @@ $Comp
 L Device:R R22
 U 1 1 5E7A059A
 P 5900 6950
-F 0 "R22" V 5693 6950 50  0000 C CNN
-F 1 "686" V 5784 6950 50  0000 C CNN
+F 0 "R22" V 5800 6950 50  0000 C CNN
+F 1 "625" V 5900 6950 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 5830 6950 50  0001 C CNN
 F 3 "~" H 5900 6950 50  0001 C CNN
 	1    5900 6950
@@ -1175,8 +1114,8 @@ $Comp
 L Analog_Switch:DG308AxY U5
 U 3 1 5E81E2E5
 P 7550 4950
-F 0 "U5" H 7550 4550 50  0000 C CNN
-F 1 "ADG442" H 7550 4650 50  0000 C CNN
+F 0 "U5" H 7550 5100 50  0000 C CNN
+F 1 "ADG442" H 7550 5200 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7550 4850 50  0001 C CNN
 F 3 "http://pdf.datasheetcatalog.com/datasheets/70/494502_DS.pdf" H 7550 4950 50  0001 C CNN
 	3    7550 4950
@@ -1221,8 +1160,8 @@ $Comp
 L Analog_Switch:DG308AxY U5
 U 2 1 5E836A6D
 P 7550 4550
-F 0 "U5" H 7550 5250 50  0000 C CNN
-F 1 "ADG442" H 7550 5150 50  0000 C CNN
+F 0 "U5" H 7700 4300 50  0000 C CNN
+F 1 "ADG442" H 7800 4400 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7550 4450 50  0001 C CNN
 F 3 "http://pdf.datasheetcatalog.com/datasheets/70/494502_DS.pdf" H 7550 4550 50  0001 C CNN
 	2    7550 4550
@@ -1298,8 +1237,8 @@ $Comp
 L Connector:Screw_Terminal_01x02 J6
 U 1 1 5E506BAB
 P 5800 3650
-F 0 "J6" V 5672 3830 50  0000 L CNN
-F 1 "CMD" V 5763 3830 50  0000 L CNN
+F 0 "J6" V 5700 3250 50  0000 L CNN
+F 1 "CMD" V 5800 3250 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 3650 50  0001 C CNN
 F 3 "~" H 5800 3650 50  0001 C CNN
 	1    5800 3650
@@ -1357,9 +1296,9 @@ Text Notes 3300 3850 2    50   ~ 0
 Sallen-Key 2-nd order, \nHPF 26.5kHz
 Text Notes 5600 7600 2    50   ~ 0
 Sallen-Key 2-nd order, \nHPF 26.5kHz
-Text Notes 6500 4100 0    50   ~ 0
+Text Notes 6150 3350 0    50   ~ 0
 100 Hz LPF
-Text Notes 5450 5750 0    50   ~ 0
+Text Notes 5200 5600 0    50   ~ 0
 1061 Hz HPF,\nbuffered
 $Comp
 L Connector:Screw_Terminal_01x02 J1
@@ -1976,17 +1915,11 @@ Connection ~ 1450 1500
 Wire Wire Line
 	2400 6800 2400 5750
 Connection ~ 2400 6900
-Text Notes 7000 6800 0    50   ~ 0
-TODO: \n1) Заменить редкие конденсаторы на комбинации из E24 или E12,\n2) Тоже самое резисторы
 Wire Wire Line
 	4650 1750 5200 1750
 Connection ~ 4650 1750
 Wire Wire Line
 	6650 4950 6750 4950
-Wire Wire Line
-	6000 4350 6000 4850
-Wire Wire Line
-	6750 4350 6750 4950
 Wire Wire Line
 	5500 1550 5700 1550
 Wire Wire Line
@@ -2628,89 +2561,34 @@ Wire Wire Line
 Connection ~ 7250 4950
 Connection ~ 7850 4950
 Wire Wire Line
-	4400 600  4400 850 
-Wire Wire Line
-	4100 850  4100 1050
-Connection ~ 4100 850 
-Connection ~ 4100 1050
-Wire Wire Line
-	4100 1050 4100 1250
-Wire Wire Line
-	4400 1250 4400 1050
-Connection ~ 4400 850 
-Connection ~ 4400 1050
-Wire Wire Line
-	4400 1050 4400 850 
-Wire Wire Line
-	4400 850  4650 850 
-Wire Wire Line
 	4650 850  4650 1750
-Wire Wire Line
-	4100 600  4100 850 
 Wire Wire Line
 	3750 1650 3950 1650
 Wire Wire Line
-	4100 850  3950 850 
-Wire Wire Line
 	3950 850  3950 1650
 Connection ~ 3950 1650
-Text Notes 3650 800  0    50   ~ 0
-C = 160n
 Text Notes 3000 2450 0    50   ~ 0
 1061 Hz HPF,\nbuffered
 Text Notes 4500 850  0    50   ~ 0
 100 Hz LPF
 $Comp
-L Device:C C8
-U 1 1 5E538BEC
-P 4250 850
-F 0 "C8" V 4300 750 50  0000 C CNN
-F 1 "39n, 1%" V 4300 1100 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 4288 700 50  0001 C CNN
-F 3 "~" H 4250 850 50  0001 C CNN
-	1    4250 850 
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F95ACF6
-P 4250 1250
-F 0 "C?" V 3998 1250 50  0000 C CNN
-F 1 "82n, 1%" V 4300 1450 50  0000 C CNN
-F 2 "" H 4288 1100 50  0001 C CNN
-F 3 "~" H 4250 1250 50  0001 C CNN
-	1    4250 1250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F95935F
-P 4250 1050
-F 0 "C?" V 3998 1050 50  0000 C CNN
-F 1 "39n, 1%" V 4300 1300 50  0000 C CNN
-F 2 "" H 4288 900 50  0001 C CNN
-F 3 "~" H 4250 1050 50  0001 C CNN
-	1    4250 1050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C6B
+L Device:C C6B1
 U 1 1 5FA1D9C5
 P 3700 2600
-F 0 "C6B" V 3650 2350 50  0000 C CNN
+F 0 "C6B1" V 3650 2350 50  0000 C CNN
 F 1 "39n, 1%" V 3750 2850 50  0000 C CNN
-F 2 "" H 3738 2450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3738 2450 50  0001 C CNN
 F 3 "~" H 3700 2600 50  0001 C CNN
 	1    3700 2600
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C6A
+L Device:C C6A1
 U 1 1 5FA1F956
 P 3700 2400
-F 0 "C6A" V 3700 2150 50  0000 C CNN
+F 0 "C6A1" V 3700 2150 50  0000 C CNN
 F 1 "39n, 1%" V 3650 2650 50  0000 C CNN
-F 2 "" H 3738 2250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3738 2250 50  0001 C CNN
 F 3 "~" H 3700 2400 50  0001 C CNN
 	1    3700 2400
 	0    1    1    0   
@@ -2726,38 +2604,256 @@ Wire Wire Line
 Connection ~ 3850 2600
 Wire Wire Line
 	3850 2600 3850 2400
+Wire Wire Line
+	4400 500  4400 400 
+Connection ~ 4400 500 
+Connection ~ 4400 600 
+Wire Wire Line
+	4400 600  4400 500 
+Wire Wire Line
+	4100 500  4100 600 
+Connection ~ 4100 500 
+Connection ~ 4100 600 
+Wire Wire Line
+	4100 400  4100 500 
 $Comp
-L Device:R R12B
+L Device:R R12A1
+U 1 1 5FA5C80D
+P 4250 400
+F 0 "R12A1" V 4250 150 50  0000 C CNN
+F 1 "18k, 1%" V 4250 450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4180 400 50  0001 C CNN
+F 3 "~" H 4250 400 50  0001 C CNN
+	1    4250 400 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12B1
 U 1 1 5FA5AC76
 P 4250 500
-F 0 "R12B" V 4250 250 50  0000 C CNN
+F 0 "R12B1" V 4250 250 50  0000 C CNN
 F 1 "39k, 1%" V 4250 550 50  0000 C CNN
-F 2 "" V 4180 500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4180 500 50  0001 C CNN
 F 3 "~" H 4250 500 50  0001 C CNN
 	1    4250 500 
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R12A
-U 1 1 5FA5C80D
-P 4250 400
-F 0 "R12A" V 4250 150 50  0000 C CNN
-F 1 "18k, 1%" V 4250 450 50  0000 C CNN
-F 2 "" V 4180 400 50  0001 C CNN
-F 3 "~" H 4250 400 50  0001 C CNN
-	1    4250 400 
+L Device:C C8B1
+U 1 1 5F95935F
+P 4250 1050
+F 0 "C8B1" V 4200 850 50  0000 C CNN
+F 1 "39n, 1%" V 4300 1300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4288 900 50  0001 C CNN
+F 3 "~" H 4250 1050 50  0001 C CNN
+	1    4250 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C8C1
+U 1 1 5F95ACF6
+P 4250 1250
+F 0 "C8C1" V 4200 1050 50  0000 C CNN
+F 1 "82n, 1%" V 4300 1450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4288 1100 50  0001 C CNN
+F 3 "~" H 4250 1250 50  0001 C CNN
+	1    4250 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C8A1
+U 1 1 5E538BEC
+P 4250 850
+F 0 "C8A1" V 4300 650 50  0000 C CNN
+F 1 "39n, 1%" V 4300 1100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4288 700 50  0001 C CNN
+F 3 "~" H 4250 850 50  0001 C CNN
+	1    4250 850 
+	0    1    1    0   
+$EndComp
+Text Notes 3650 800  0    50   ~ 0
+C = 160n
+Wire Wire Line
+	4100 850  3950 850 
+Wire Wire Line
+	4100 600  4100 850 
+Wire Wire Line
+	4400 850  4650 850 
+Wire Wire Line
+	4400 1050 4400 850 
+Connection ~ 4400 1050
+Connection ~ 4400 850 
+Wire Wire Line
+	4400 1250 4400 1050
+Wire Wire Line
+	4100 1050 4100 1250
+Connection ~ 4100 1050
+Connection ~ 4100 850 
+Wire Wire Line
+	4100 850  4100 1050
+Wire Wire Line
+	4400 600  4400 850 
+$Comp
+L Device:R R12C1
+U 1 1 5E537A89
+P 4250 600
+F 0 "R12C1" V 4250 350 50  0000 C CNN
+F 1 "51k, 1%" V 4250 650 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 4180 600 50  0001 C CNN
+F 3 "~" H 4250 600 50  0001 C CNN
+	1    4250 600 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R21A1
+U 1 1 5F993D26
+P 6400 3600
+F 0 "R21A1" V 6400 3350 50  0000 C CNN
+F 1 "18k, 1%" V 6400 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6330 3600 50  0001 C CNN
+F 3 "~" H 6400 3600 50  0001 C CNN
+	1    6400 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R21B1
+U 1 1 5F993D30
+P 6400 3700
+F 0 "R21B1" V 6400 3450 50  0000 C CNN
+F 1 "39k, 1%" V 6400 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6330 3700 50  0001 C CNN
+F 3 "~" H 6400 3700 50  0001 C CNN
+	1    6400 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C14B1
+U 1 1 5F993D3A
+P 6400 4250
+F 0 "C14B1" V 6350 4050 50  0000 C CNN
+F 1 "39n, 1%" V 6450 4500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6438 4100 50  0001 C CNN
+F 3 "~" H 6400 4250 50  0001 C CNN
+	1    6400 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C14C1
+U 1 1 5F993D44
+P 6400 4450
+F 0 "C14C1" V 6350 4250 50  0000 C CNN
+F 1 "82n, 1%" V 6450 4650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6438 4300 50  0001 C CNN
+F 3 "~" H 6400 4450 50  0001 C CNN
+	1    6400 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C14A1
+U 1 1 5F993D4E
+P 6400 4050
+F 0 "C14A1" V 6350 3850 50  0000 C CNN
+F 1 "39n, 1%" V 6450 4300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6438 3900 50  0001 C CNN
+F 3 "~" H 6400 4050 50  0001 C CNN
+	1    6400 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R21C1
+U 1 1 5F993D5E
+P 6400 3800
+F 0 "R21C1" V 6400 3550 50  0000 C CNN
+F 1 "51k, 1%" V 6400 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6330 3800 50  0001 C CNN
+F 3 "~" H 6400 3800 50  0001 C CNN
+	1    6400 3800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4100 400  4100 500 
-Connection ~ 4100 600 
-Connection ~ 4100 500 
+	6550 3600 6550 3700
+Connection ~ 6550 3700
 Wire Wire Line
-	4100 500  4100 600 
+	6550 3700 6550 3800
 Wire Wire Line
-	4400 600  4400 500 
-Connection ~ 4400 600 
-Connection ~ 4400 500 
+	6250 3600 6250 3700
+Connection ~ 6250 3700
 Wire Wire Line
-	4400 500  4400 400 
+	6250 3700 6250 3800
+Wire Wire Line
+	6250 4050 6250 4250
+Connection ~ 6250 4250
+Wire Wire Line
+	6250 4250 6250 4450
+Wire Wire Line
+	6550 4050 6550 4250
+Connection ~ 6550 4250
+Wire Wire Line
+	6550 4250 6550 4450
+Wire Wire Line
+	6550 4250 6750 4250
+Wire Wire Line
+	6750 4250 6750 4950
+Wire Wire Line
+	6750 4250 6750 3700
+Wire Wire Line
+	6750 3700 6550 3700
+Connection ~ 6750 4250
+Wire Wire Line
+	6000 3700 6250 3700
+Wire Wire Line
+	6000 3700 6000 4250
+Wire Wire Line
+	6250 4250 6000 4250
+Connection ~ 6000 4250
+Wire Wire Line
+	6000 4250 6000 4850
+$Comp
+L Device:C C12C1
+U 1 1 5FAE39C1
+P 5350 6200
+F 0 "C12C1" V 5300 5950 50  0000 C CNN
+F 1 "22n, 1%" V 5300 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5388 6050 50  0001 C CNN
+F 3 "~" H 5350 6200 50  0001 C CNN
+	1    5350 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C12B1
+U 1 1 5FAE39CB
+P 5350 6000
+F 0 "C12B1" V 5300 5750 50  0000 C CNN
+F 1 "39n, 1%" V 5400 6250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5388 5850 50  0001 C CNN
+F 3 "~" H 5350 6000 50  0001 C CNN
+	1    5350 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C12A1
+U 1 1 5FAE39D5
+P 5350 5800
+F 0 "C12A1" V 5350 5550 50  0000 C CNN
+F 1 "39n, 1%" V 5300 6050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5388 5650 50  0001 C CNN
+F 3 "~" H 5350 5800 50  0001 C CNN
+	1    5350 5800
+	0    1    1    0   
+$EndComp
+Connection ~ 5500 6000
+Wire Wire Line
+	5500 5800 5500 6000
+Wire Wire Line
+	5200 5800 5200 6000
+Wire Wire Line
+	5500 6000 5500 6200
+Connection ~ 5200 6000
+Wire Wire Line
+	5200 6000 5200 6200
+Wire Wire Line
+	5600 6000 5600 6300
+Connection ~ 5600 6000
+Wire Wire Line
+	5600 6000 5850 6000
 $EndSCHEMATC
